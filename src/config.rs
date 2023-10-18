@@ -11,14 +11,14 @@ use sdl2::pixels::Color;macro_rules! color_from_hex {
 
 pub const FPS: u32 = 30;
 
-pub const WINDOW_WIDTH: u32 = 800;
-pub const WINDOW_HEIGHT: u32 = 800;
+pub const WINDOW_WIDTH: u32 = 900;
+pub const WINDOW_HEIGHT: u32 = 900;
 
-pub const CANVAS_WIDTH: u32 = 600;
-pub const CANVAS_HEIGHT: u32 = 600;
+pub const CANVAS_WIDTH: u32 = 800;
+pub const CANVAS_HEIGHT: u32 = 800;
 
-pub const BOARD_WIDTH: u32 = 15;
-pub const BOARD_HEIGHT: u32 = 15;
+pub const BOARD_WIDTH: u32 = 50;
+pub const BOARD_HEIGHT: u32 = 50;
 
 pub const CELL_WIDTH: u32 = CANVAS_WIDTH / BOARD_WIDTH;
 pub const CELL_HEIGHT: u32 = CANVAS_HEIGHT / BOARD_HEIGHT;
@@ -28,17 +28,17 @@ pub const FOOD_SCALE: f32 = 0.4;
 
 
 // Counts
-pub const AGENT_COUNT: usize = 5;
-pub const WALLS_COUNT: usize = 15;
-pub const FOOD_COUNT: usize = 60;
+pub const AGENT_COUNT: usize = 100;
+pub const WALLS_COUNT: usize = 100;
+pub const FOOD_COUNT: usize = 400;
 
-pub const RENDER_GRID: bool = true;
-
+pub const RENDER_GRID: bool = false;
+pub const TRAINING_MODE: bool = true;
 
 // Agent
-pub const AGENT_ENERGY: u8 = 100;
-pub const AGENT_ENERGY_LOSS: u8 = 1;
-pub const AGENT_ENERGY_RESTORE: u8 = 10;
+pub const AGENT_ENERGY: i16 = 100;
+pub const AGENT_ENERGY_LOSS: i16 = 1;
+pub const AGENT_ENERGY_RESTORE: i16 = 10;
 pub const AGENT_VIEW_DISTANCE: u8 = 3;
 
 // Colors

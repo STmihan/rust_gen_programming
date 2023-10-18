@@ -5,7 +5,7 @@ use crate::models::direction::Direction;
 #[derive(Debug, Clone)]
 pub struct Agent {
     pub pos: Coord,
-    pub energy: u8,
+    pub energy: i16,
     pub dir: Direction,
     pub action: Action,
 

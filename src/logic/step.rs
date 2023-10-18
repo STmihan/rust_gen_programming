@@ -1,4 +1,4 @@
-use crate::{config, nn};
+use crate::{config, gen_loop, nn};
 use crate::logic::{get_at, utils};
 use crate::models::action::Action;
 use crate::models::agent::Agent;

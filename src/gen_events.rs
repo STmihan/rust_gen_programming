@@ -1,6 +1,7 @@
 use sdl2::event::Event;
 use sdl2::EventPump;
 use sdl2::keyboard::Keycode;
+
 use crate::{config, gen_logic, logic};
 use crate::models::state::State;
 
@@ -12,6 +13,7 @@ pub fn process_event(event_pump: &mut EventPump, state: &mut State) {
             Event::KeyDown { keycode: Some(Keycode::Escape), .. } => on_escape_down(state),
             Event::KeyDown { keycode: Some(Keycode::Space), .. } => on_space_down(state),
             Event::KeyDown { keycode: Some(Keycode::P), .. } => on_p_down(state),
+            Event::KeyDown { keycode: Some(Keycode::R), .. } => on_r_down(state),
 
             Event::MouseButtonDown { x, y, .. } => on_mouse_button_down(state, x, y),
             _ => {}
@@ -46,4 +48,8 @@ fn on_p_down(state: &mut State) {
 
 fn on_escape_down(state: &mut State) {
     state.exit = true;
+}
+
+fn on_r_down(state: &mut State) {
+    gen_logic::restart(state);
 }
